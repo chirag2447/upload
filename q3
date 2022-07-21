@@ -1,0 +1,68 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package practical;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author chirag
+ */
+public class Practical {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Employee e1 = new Employee("coding",21,50000,"chiarg","234234","parvat patia");
+        Manager m1 = new Manager("coding",21,50000,"chiarg","234234","parvat patia");
+        
+        e1.printSalary();
+        m1.printSalary();
+        
+        
+        
+       
+        
+        
+    }
+    
+}
+class Member {
+    
+    int age,salary;
+
+    String name,phoneNumber,address;
+    public Member(int age, int salary, String name, String phoneNumber, String address) {
+        this.age = age;
+        this.salary = salary;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
+
+    public void printSalary(){
+        System.out.println(this.salary);
+    }
+}
+class Employee extends Member{
+    String specialization;
+
+    public Employee(String specialization, int age, int salary, String name, String phoneNumber, String address) {
+        super(age, salary, name, phoneNumber, address);
+        this.specialization = specialization;
+    }
+    
+}
+class Manager extends Member{
+    String department;
+
+    public Manager(String department, int age, int salary, String name, String phoneNumber, String address) {
+        super(age, salary, name, phoneNumber, address);
+        this.department = department;
+    }
+   
+}

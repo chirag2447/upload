@@ -1,0 +1,68 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication5;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author chirag
+ */
+public class JavaApplication5 {
+
+    /**
+     * @param args the command line arguments
+     * Create a class named 'Rectangle' with two data members 'length' and
+'breadth' and two methods to print the area and perimeter of the rectangle respectively.
+Its constructor having parameters for length and breadth is used to initialize length and
+breadth of the rectangle. Let class 'Square' inherit the 'Rectangle' class with its
+constructor having a parameter for its side (suppose s) calling the constructor of its
+parent class as 'super(s,s)'. Print the area and perimeter of a rectangle and a square.
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please Enter length and breath for rectangle :");
+        float length = in.nextFloat();
+        float breath = in.nextFloat();
+        Rectangle r1 = new Rectangle(length,breath);
+        r1.area();
+        r1.perimeter();
+        System.out.println("Please Enter side for square :");
+        float side = in.nextFloat();
+        Square s1 = new Square(side);
+        s1.area();
+        s1.perimeter();
+        
+        
+        
+    }
+    
+}
+class Rectangle{
+    float length,breath;
+
+    public Rectangle(float length, float breath) {
+        this.length = length;
+        this.breath = breath;
+    }
+    
+    void area(){
+        float area = length * breath;
+        System.out.println("Area is "+area);
+    }
+    void perimeter(){
+        float peri = (2 * (length + breath));
+        System.out.println("perimeter is "+peri);
+    }
+}
+class Square extends Rectangle{
+
+    public Square(float side) {
+        super(side,side);
+       
+    }
+    
+}
