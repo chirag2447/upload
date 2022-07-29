@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package q6;
+
+/**
+ *
+ * @author chirag
+ */
+
+public class Q6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Thread t1 = new Thread(new Runnable(){
+           public void run(){
+               System.out.println("M.s.c(I.T)");
+           } 
+        });
+        Thread t2 = new Thread(new Runnable(){
+           public void run(){
+               System.out.println("Welcome");
+           } 
+        });
+      t1.start();
+      t2.start();
+    }
+    
+}
+

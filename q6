@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package q6;
+
+/**
+ *
+ * @author chirag
+ */
+class Shape{
+    void shapePrint(){
+        System.out.println("this is shape");
+    }
+}
+class Rectangle extends Shape{
+    void rectanglePrint(){
+        System.out.println("this is rectangle shape");
+    }
+}
+class Square extends Rectangle{
+    void squarePrint(){
+        System.out.println("square is a rectangle");
+    }
+}
+class Circle extends Shape{
+    void circlePrint(){
+        System.out.println("this is circle shape");
+    }
+}
+public class Q6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Square s1 = new Square();
+        s1.shapePrint();
+        s1.rectanglePrint();
+    }
+    
+}
+

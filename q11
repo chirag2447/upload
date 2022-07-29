@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package q6;
+
+/**
+ *
+ * @author chirag
+ */
+class Box{
+    float length,breath,height;
+
+    public Box(float length, float breath, float height) {
+        this.length = length;
+        this.breath = breath;
+        this.height = height;
+    }
+    
+    float volume(){
+        return length*breath*height;
+    }
+}
+public class Q6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println(new Box(2,3,4).volume()) ;
+    }
+    
+}
+
